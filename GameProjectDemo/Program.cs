@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameProjectDemo.Adapters;
 
 namespace GameProjectDemo
 {
@@ -44,14 +45,25 @@ namespace GameProjectDemo
             saleManager.Sale(game1, gamer2);
             Console.WriteLine("-----------------------------------------------");
 
-            GamerCheckManager gamerCheckManager = new GamerCheckManager();
-            if(gamerCheckManager.CheckIfRealGamer(gamer1))
+            MernisServiceAdapter CheckManager = new MernisServiceAdapter();
+            if (CheckManager.CheckIfRealGamer(gamer1))
             {
                 Console.WriteLine(gamer1.UserName + " Kullanıcı Doğrulandı");
             }
             else
             {
                 Console.WriteLine(gamer1.UserName + " Kullanıcı Doğrulanmadı");
+            }
+            Console.WriteLine("-----------------------------------------------");
+
+            GamerCheckManager gamerCheckManager = new GamerCheckManager();
+            if(CheckManager.CheckIfRealGamer(gamer2))
+            {
+                Console.WriteLine(gamer2.UserName + " Kullanıcı Doğrulandı");
+            }
+            else
+            {
+                Console.WriteLine(gamer2.UserName + " Kullanıcı Doğrulanmadı");
             }
             Console.WriteLine("-----------------------------------------------");
            
