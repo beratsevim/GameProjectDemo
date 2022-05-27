@@ -20,7 +20,7 @@ namespace GameProjectDemo
                 DateOfBirth = new DateTime(2001,02,12),
                 FirstName = "Berat",
                 LastName = "Sevim",
-                NationalityId = 12727862342,
+                NationalityId = 000000000000,
                 UserName = "Beratsvm",
             };
             Gamer gamer2 = new Gamer()
@@ -29,7 +29,7 @@ namespace GameProjectDemo
                 DateOfBirth = new DateTime(2000, 10, 24),
                 FirstName = "Baran",
                 LastName = "Tetik",
-                NationalityId = 12727862342,
+                NationalityId = 00000000000,
                 UserName = "Triggerbaran",
             };
 
